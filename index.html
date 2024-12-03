@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            color: white;
+            position: absolute;
+            display: flex;
+            align-items: center;
+        }
+        
+        header .square { 
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            transition: height .2s, width .7s;
+        }
+        header .square.actived {
+            height: 60px;
+            width: 30rem;
+         }
+        
+        header .square .text-square{ 
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s ease-in-out;
+        }
+        
+        header .square .text-square.active{ 
+            opacity: 1;
+        }
+
+        header .text-h { 
+            position: relative;
+            left: 0;
+            opacity: 1;
+            transition: .2s ease-out;
+        }
+        
+        header .text-h.active { 
+            left: -20px;
+            opacity: 0;
+        }
+
+        main {
+            background: url(./asset/1343296.jpeg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+        }
+
+        main .gm-cnt-1 {
+            color: white;
+            width: 40vh;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 30px;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        main .gm-cnt-1 .btn-gm {
+            color: white;
+            margin: 15px 0 0 0;
+            padding: 10px 30px;
+            border-radius: 10px;
+            font-weight: 600;
+            background-color: red;
+            border: 0;
+        }
+        
+        /* main .gm-cnt-1 */
+        
+        main .gm-cnt-1 .body-gm-srvr {
+            z-index: -1;
+            position: absolute;
+            background-color: black;
+            height: 0;
+            width: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .2s ease-in-out;
+        }
+        
+        main .gm-cnt-1 .body-gm-srvr.active {
+            z-index: 1;
+            height: 50vh;
+        }
+        
+        main .gm-cnt-1 .body-gm-srvr .btn-cls-srvr {
+            color: white;
+            font-size: 15px;
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            background-color: transparent;
+            border: none;
+            opacity: 0;
+            transition: .2s ease-in-out;
+        }
+        
+        main .gm-cnt-1 .body-gm-srvr .btn-cls-srvr.active { 
+            opacity: 1;
+        }
+
+        main .gm-cnt-1 .body-gm-srvr .list-srvr { 
+            z-index: 0;
+            list-style: none;
+            opacity: 0;
+            transition: .2s linear;
+            pointer-events: none;
+        }
+        
+        main .gm-cnt-1 .body-gm-srvr .list-srvr.active { 
+            z-index: 1;
+            opacity: 1;
+            pointer-events: all;
+        }
+        main .gm-cnt-1 .body-gm-srvr .list-srvr > * {
+            margin: 20px 0 20px 0;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        main .gm-cnt-1 .body-gm-srvr .list-srvr li .hid {
+            color: white;
+            font-size: 1.7rem;
+            text-decoration: none;
+        }
+         
+    </style>
+</head>
+<body>
+
+    <header>
+        <section class="square">
+            <p class="text-square">this is just beta for gaming website, on progress</p>
+        </section>
+        <div class="text-h">
+            <h3>Click Me !</h3>
+            <span>For detail</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="gm-cnt-1">
+            <div class="brand-gm"><h1>Attack On Presiden</h1></div>
+            <p>Chose your server</p>
+
+            <button class="btn-gm">Chose</button>
+
+            <div class="body-gm-srvr">
+                <button class="btn-cls-srvr">X</button>
+                <ul class="list-srvr">
+                    <li><a class="hid" href="#">Asia</a></li>
+                    <li><a class="hid" href="#">Asia</a></li>
+                    <li><a class="hid" href="#">Asia</a></li>
+                    <li><a class="hid" href="#">Asia</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- <script src="./loop_pengkondisian_bersarang.js"></script> -->
+    <!-- <script src="./game.js"></script> -->
+    <!-- <script src="./game_angka.js"></script> -->
+    <!-- <script src="./program_array.js"></script> -->
+    <!-- <script src="./function.js"></script> -->
+    <script src="./setTimeOut.js"></script>
+</body>
+</html>
